@@ -1,0 +1,1254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--defaultFont);
+  height: 100vh;
+  background-color: var(--whiteColor);
+}
+.hideItem {
+  display: flex;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+#noTopMargin {
+  margin-top: 0;
+}
+/* Navbar */
+nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--whiteColor);
+  position: fixed;
+  border-bottom: 1px solid #ffffff24;
+  z-index: 3;
+  top: 0;
+  border-bottom: 1px solid #08101845;
+}
+
+.subNavBarContainer {
+  background-color: var(--primary);
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 25px;
+}
+.subNavBarLinks {
+  font-size: 14px;
+  text-decoration: none;
+  align-items: center;
+  color: var(--whiteColor);
+  margin: 10px 0;
+}
+.subNavBarLinks i {
+  margin-right: 5px;
+}
+.subNavBarLinks:hover {
+  text-decoration: underline;
+}
+.subNavBarLinks:active {
+  color: var(--support);
+}
+.containerNavbar {
+  max-width: 1000px;
+  width: 95%;
+  height: auto;
+  min-height: 60px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbarImg {
+  width: 160px;
+}
+.navbarImg img {
+  width: 100%;
+}
+
+.navbarMenu {
+  width: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbarMenu .itemsMenuNavbar,
+.itemsMenuNavbar a,
+.coletaLeadLogin {
+  color: var(--blackColor);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbarMenu .actived a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.coletaLeadLogin {
+  background-color: var(--primary);
+  color: var(--whiteColor);
+  padding: 7px 15px;
+  border-radius: 15px;
+  font-size: 11px;
+  margin-right: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.registerNavbarBtn {
+  background-color: var(--secundary);
+  color: var(--whiteColor);
+  padding: 7px 15px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.coletaLeadLogin:active,
+.registerNavbarBtn:active {
+  opacity: 0.7;
+}
+
+.navbarMenu .itemsMenuNavbar:hover,
+.navbarMenu .itemsMenuNavbar a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.navbarMenu .itemsMenuNavbar:not(:last-child) {
+  margin-right: 15px;
+}
+
+.containerNavbar .mobileBtnMobile {
+  color: var(--blackColor);
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.containerNavbar i {
+  display: none;
+}
+.containerNavbar .mobileBtnMobile:active {
+  transform: rotate(-10deg);
+}
+.menuMobileBtn {
+  width: 26px;
+  height: 28px;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  row-gap: 7px;
+  /* border: 1px solid #000; */
+}
+.menuMobileBars {
+  width: 100%;
+  height: 3px;
+  border-radius: 20px;
+  background-color: var(--blackColor);
+  /* transition: 0.8s; */
+}
+/* End of Navbar */
+
+/* Header section */
+header {
+  width: 100%;
+  height: 360px;
+  background-image: url(https://www.euestudo.com.vc/Loja/Imagens/quemsomos1432023155622688.jpg);
+  background-size: cover;
+  background-position: center center;
+  margin-top: 99px;
+  color: var(--whiteColor);
+}
+.headerContainer {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.titleBar {
+  border: none;
+  background-color: var(--whiteColor);
+
+  height: 3px;
+  width: 120px;
+  margin-bottom: 15px;
+}
+.headerTitle {
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+.headerSubtitle {
+  font-size: 30px;
+}
+/* End of Header section */
+
+/* End of Our Story section */
+.ourStorySection {
+  width: 100%;
+  background-color: var(--iceColor);
+  padding-bottom: 50px;
+  display: flex;
+}
+.ourStoryContainer {
+  max-width: 1000px;
+  width: 90%;
+  margin: -120px auto 0;
+  padding: 50px 0;
+  background-color: var(--whiteColor);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 21px -3px var(--transparentdarkColor);
+}
+.ourStoryContent {
+  width: 85%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  border-radius: 15px;
+}
+.ourStoryText {
+  font-size: 16px;
+  margin-bottom: 50px;
+  text-align: justify;
+  line-height: 22px;
+}
+.ourStoryIconsBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  column-gap: 40px;
+  row-gap: 50px;
+  margin-bottom: 50px;
+}
+.ourStoryIconTextBox {
+  width: 182px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.ourStoryIconTextBox img {
+  /* width: 53px;
+    height: 53px; */
+  margin-bottom: 5px;
+}
+.ourStoryIconTextBox img:nth-child(1) {
+  /* width: 60px;
+    height: 53px; */
+}
+.ourStoryIconTitle {
+  color: var(--primary);
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+.ourStoryIconText {
+  font-size: 13px;
+  text-align: center;
+}
+.ourStoryFooter {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.ourStoryFooterTextBtn {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+.ourStoryBar {
+  border: none;
+  height: 3px;
+  width: 120px;
+  background-color: var(--primary);
+  margin-bottom: 15px;
+}
+.ourStoryFooterTitle {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.ourStoryFooterText {
+  font-size: 16px;
+  max-width: 355px;
+  width: 100%;
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+.ourStoryRegisterBtn {
+  font-size: 14px;
+  color: var(--whiteColor);
+  background-color: var(--primary);
+  border-radius: 20px;
+  padding: 6px 0;
+  width: 240px;
+  border: 1px solid;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  transition: 0.6s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.ourStoryRegisterBtn:hover {
+  color: var(--primary);
+  background-color: var(--whiteColor);
+  border: 1px solid;
+}
+.ourStoryRegisterBtn:active {
+  color: var(--whiteColor);
+  background-color: var(--primary);
+}
+.ourStoryCoursesBtn {
+  font-size: 14px;
+  color: var(--primary);
+  background-color: var(--whiteColor);
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 6px 0;
+  width: 240px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  transition: 0.6s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.ourStoryCoursesBtn:hover {
+  color: var(--whiteColor);
+  background-color: var(--primary);
+}
+.ourStoryCoursesBtn:active {
+  color: var(--primary);
+  background-color: var(--whiteColor);
+}
+.ourStoryFooterVideo {
+  width: 48%;
+  height: 305px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+}
+/* End of Our Story section */
+
+/* Our Values section */
+.ourValuesSection {
+  width: 100%;
+  background-color: var(--iceColor);
+  color: var(--blackColor);
+  padding: 70px 0;
+}
+.ourValuesContainer {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.ourValuesTitle {
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+.ourValuesIconsBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  row-gap: 40px;
+  column-gap: 30px;
+  margin-top: 35px;
+}
+.ourValuesIcon {
+  width: 120px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 23px -3px var(--transparentdarkColor);
+}
+.ourValuesIconImgBox {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -95px;
+  margin-bottom: 15px;
+}
+.ourValuesIconImgBox img {
+  width: 2.5rem;
+}
+.ourValuesTextIcon {
+  font-size: 14px;
+  text-align: center;
+}
+/* End of Our Values section */
+
+/* Our Pillars section */
+.ourPillarsSection {
+  width: 100%;
+  padding: 60px 0 20px;
+  background-color: var(--primary);
+  color: var(--whiteColor);
+}
+.ourPillarsContainer {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.ourPillarsTitle {
+  font-size: 35px;
+  margin-bottom: 35px;
+}
+.ourPillarsBox {
+  width: 100%;
+  height: 370px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background-color: var(--whiteColor);
+  color: var(--blackColor);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+.ourPillarsBoxTexts {
+  width: 54%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.ourPillarsBoxTexts div {
+  width: 87%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.ourPillarsBoxTitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.ourPillarsBoxText {
+  font-size: 15px;
+  line-height: 22px;
+}
+.ourPillarsBoxImg {
+  width: 44%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 370px; */
+}
+.ourPillarsBoxImg img {
+  width: 100%;
+  height: 100%;
+}
+/* End of Our Pillars section */
+
+/* Testimonial section */
+.testimonialSection {
+  width: 100%;
+  height: 460px;
+  padding: 70px 0 20px;
+  background-color: var(--whiteColor);
+  color: var(--blackColor);
+  position: relative;
+}
+.containerTestimonial {
+  max-width: 1000px;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerTestimonial {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  /* position: relative; */
+  z-index: 1;
+  background-color: var(--whiteColor);
+  padding-bottom: 10px;
+}
+.testimonialBar {
+  height: 3px;
+  width: 120px;
+  border: none;
+  background-color: var(--primary);
+  margin-bottom: 15px;
+}
+.testimonialTitle {
+  font-size: 30px;
+}
+.testimonialChangeBtnBox {
+  margin-left: 6px;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  column-gap: 40px;
+}
+/* Slide ↓  */
+.slideDepoimentos-wrapper {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  width: 65%;
+  top: 0;
+  bottom: 0;
+}
+.depoimentosSlide-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+.depoimentosSlide-list {
+  display: flex;
+  /* column-gap: 10px; */
+}
+.depoimentosSlide-list .depoimentosSlide-item {
+  flex-shrink: 0;
+  padding: 20px 20px;
+  width: 325px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.depoimentosSlide-list .internBox {
+  flex-shrink: 0;
+  padding: 0 10px;
+  width: 280px;
+  height: 265px;
+  cursor: grab;
+  margin-top: 30px;
+  box-shadow: 0px 0px 23px -3px var(--transparentdarkColor);
+  border-radius: 12px;
+}
+.depoimentosSlide-list .depoimentosSlide-content {
+  background-color: var(--whiteColor);
+  height: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+}
+.depoimentosSlide-list .contentTextBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  row-gap: 5px;
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
+.depoimentosSlide-list .depoimentosSlide-content img {
+  margin-top: -55px;
+  width: 90px;
+  border-radius: 50%;
+}
+.depoimentosSlide-list .aspasDepoimentos {
+  position: absolute;
+  top: 26px;
+  left: 6%;
+  font-size: 69px;
+  color: var(--primary);
+  transform: rotate(180deg);
+  font-family: var(--Oswald);
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.depoimentosSlide-list .txtDepoimentos {
+  font-size: 11px;
+  line-height: 15px;
+  text-align: left;
+  width: 85%;
+  margin: 0 auto;
+}
+.depoimentosSlide-list .footerBox {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.depoimentosSlide-list .nomeAutorDepoimento {
+  font-size: 12px;
+  color: var(--blackColor);
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.depoimentosSlide-list .redeScAutorDepoimento {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 11px;
+  color: var(--primary);
+}
+.depoimentosSlide-button {
+  color: var(--primary);
+  background-color: var(--whiteColor);
+  font-size: 25px;
+  z-index: 1;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  padding: 8px 12px;
+  box-shadow: 0px 0px 21px -5px var(--transparentWindow);
+}
+.depoimentosSlide-button:hover {
+  color: var(--whiteColor);
+  background-color: var(--primary);
+}
+.depoimentosSlide-button:active {
+  opacity: 0.8;
+}
+/* .depoimentosSlide-previous {
+        left: 290px;
+      }
+      .depoimentosSlide-next {
+        right: 290px;
+      } */
+.depoimentosSlide-controls {
+  margin: 20px auto 0;
+  display: none;
+}
+/* Criar esse no JS ↓*/
+.depoimentosSlide-controls .depoimentosSlide-control-button {
+  background-color: transparent;
+  color: transparent;
+  font-size: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  padding: 0;
+  margin-bottom: 30px;
+}
+.depoimentosSlide-controls .depoimentosSlide-control-button.activeDepoimentos {
+  color: var(--whiteColor);
+  background-color: var(--whiteColor);
+  border-radius: 50%;
+}
+/* Criar esse no JS ↑*/
+/* End of Testimonial section */
+
+/* Footer Section */
+footer {
+  width: 100%;
+  padding: 60px 0 20px;
+  color: var(--blackColor);
+  background-color: var(--whiteColor);
+}
+.footerContainer {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+.footerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 40px;
+}
+.footerTextBox {
+  /* linksCreatedJs */
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.footerInfoBox {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: 5px;
+}
+.OurCoursesFooterBox,
+.footerRegristrationBox {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: 10px;
+}
+.footerTextTitle {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.footerInfoBox .OurCoursesLinks,
+.OurCoursesFooterBox .OurCoursesLinks {
+  text-decoration: none;
+  color: var(--blackFont);
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.8s;
+  cursor: pointer;
+  text-align: justify;
+}
+.footerInfoBox .OurCoursesLinks:hover {
+  color: var(--primary);
+}
+.footerInfoBox .OurCoursesLinks:active,
+.OurCoursesFooterBox .OurCoursesLinks:active {
+  opacity: 0.9;
+}
+
+.footerInfoBox .linksCreatedJs {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  row-gap: 10px;
+}
+.footerInfoBox .infoBoxLeftFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 47%;
+  row-gap: 10px;
+}
+.footerInfoBox .serviceBox {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 51%;
+  row-gap: 10px;
+}
+
+.OurCoursesFooterBox a,
+.footerInfoBox a,
+.footerRegristrationBox a,
+.linksCreatedJs span a,
+.footerInfoBox a {
+  text-decoration: none;
+  color: var(--blackColor);
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.8s;
+}
+.linksCreatedJs span a:hover,
+.OurCoursesFooterBox a:hover,
+.footerInfoBox a:hover,
+.footerRegristrationBox a:hover {
+  color: var(--primary);
+}
+
+.footerSocialMediaIconBox {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+}
+.footerSocialMediaIconBox a {
+  text-decoration: none;
+}
+
+.footerSocialMediaIconBox i {
+  font-size: 25px;
+  color: var(--blackColor);
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.8s;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.footerSocialMediaIconBox i:hover {
+  transform: scale(1.2);
+}
+.footerSocialMediaIconBox i:active {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+.footerBar {
+  border: none;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blackColor);
+}
+.footerEnd {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+.footerEnd .footerLogo {
+  width: 232px;
+}
+.FooterEndUniMais {
+  width: 220px;
+}
+.FooterEndDZM {
+  width: 120px;
+}
+/* End Footer Section */
+
+/*
+  
+           MEDIA QUERY
+  
+      */
+
+@media (max-width: 1800px) {
+  /* Testimonials section  */
+  .depoimentosSlide-previous {
+    left: 225px;
+  }
+  .depoimentosSlide-next {
+    right: 225px;
+  }
+  /* End Testimonials section  */
+}
+
+@media (max-width: 1600px) {
+  /* Testimonials section  */
+  .depoimentosSlide-previous {
+    left: 115px;
+  }
+  .depoimentosSlide-next {
+    right: 115px;
+  }
+  /* End Testimonials section  */
+}
+
+@media (max-width: 1400px) {
+  /* Testimonials section  */
+  .depoimentosSlide-previous {
+    left: 35px;
+  }
+  .depoimentosSlide-next {
+    right: 35px;
+  }
+  /* End Testimonials section  */
+}
+
+@media (max-width: 1106px) {
+  /* Navbar */
+  .menuMobileBtn {
+    display: flex;
+  }
+  .navbarMenu {
+    position: fixed;
+    top: 95px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--transparentdarkColor);
+    backdrop-filter: blur(6px);
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    row-gap: 30px;
+    padding: 20px 30px 65px 0;
+    margin-top: 0px;
+  }
+
+  .coletaLeadLogin,
+  .navbarMenu .itemsMenuNavbar,
+  .registerNavbarBtn {
+    margin-right: 15px;
+  }
+  .coletaLeadLogin,
+  .registerNavbarBtn {
+    margin-right: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .navbarMenu .itemsMenuNavbar,
+  .itemsMenuNavbar a {
+    color: var(--whiteColor);
+    font-size: 16px;
+  }
+  .coletaLeadLogin,
+  .registerNavbarBtn {
+    font-size: 16px;
+  }
+  .containerNavbar i {
+    display: block;
+  }
+  /* End of Navbar */
+
+  /* Our Story section */
+  .ourStoryIconsBox {
+    column-gap: 8px;
+  }
+  /* End of Our Story section */
+}
+
+@media (max-width: 992px) {
+  /* Our Story section */
+  .ourStoryIconsBox {
+    column-gap: 110px;
+  }
+  /* End of Our Story section */
+
+  /* Our Values section */
+  .ourValuesContainer {
+    align-items: center;
+  }
+  .ourValuesTitle {
+    text-align: center;
+  }
+  .ourValuesIconsBox {
+    max-width: 450px;
+    width: 100%;
+    row-gap: 85px;
+    margin: 30px auto 0;
+    justify-content: center;
+  }
+  /* End of Our Values section */
+
+  /* Our Pillars section */
+  .ourPillarsContainer {
+    align-items: center;
+  }
+  .ourPillarsTitle {
+    text-align: center;
+  }
+  .ourPillarsBox {
+    flex-direction: column;
+    height: auto;
+    max-width: 500px;
+    width: 100%;
+  }
+  .ourPillarsBoxTexts {
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    padding: 40px 0;
+  }
+  .ourPillarsBoxTexts div {
+    align-items: center;
+  }
+  .ourPillarsBoxTitle,
+  .ourPillarsBoxText {
+    text-align: center;
+  }
+  .ourPillarsBoxImg {
+    width: 100%;
+  }
+  /* End of Our Pillars section */
+
+  /* Testimonials Section */
+  .testimonialSection {
+    height: 660px;
+  }
+  .headerTestimonial {
+    align-items: center;
+  }
+  .headerTestimonialText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonialTitle {
+    text-align: center;
+  }
+  .slideDepoimentos-wrapper {
+    width: 100%;
+    top: 15px;
+  }
+  /* End of Testimonials Section */
+
+  /* Footer Section */
+  .footerHeader {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .footerTextBox {
+    width: 100%;
+  }
+  .footerSocialMediaIconBox {
+    max-width: 450px;
+    width: 100%;
+    margin: auto;
+  }
+  /* End Footer Section */
+}
+
+@media (max-width: 768px) {
+  /* NavBar*/
+  nav {
+    width: 90%;
+    right: 5%;
+    left: 5%;
+  }
+  .containerNavbar {
+    width: 85%;
+  }
+  /* End of NavBar*/
+
+  /* Header section */
+  header {
+    width: 90%;
+    height: 520px;
+    margin: 99px auto 0;
+    background-image: url(https://www.euestudo.com.vc/Loja/Imagens/bannermobile143202318247649.jpg);
+  }
+  .headerContainer {
+    align-items: center;
+    padding-top: 130px;
+  }
+  .headerTitle,
+  .headerSubtitle {
+    text-align: center;
+  }
+  /* End of Header section */
+
+  /* Our Story section */
+  .ourStorySection {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .ourStoryIconsBox {
+    column-gap: 50px;
+  }
+  .ourStoryFooter {
+    flex-direction: column;
+  }
+  .ourStoryFooterTextBtn {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .ourStoryText,
+  .ourStoryFooterTitle,
+  .ourStoryFooterText {
+    text-align: center;
+  }
+  .ourStoryFooterVideo {
+    width: 100%;
+  }
+  /* End of Our Story section */
+
+  /* Our Values section */
+  .ourValuesSection {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .ourValuesContainer {
+    align-items: center;
+  }
+  .ourValuesTitle {
+    text-align: center;
+  }
+  .ourValuesIconsBox {
+    width: 460px;
+  }
+  /* End of Our Values section */
+
+  /* Pillars section */
+  .ourPillarsSection {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* End of Our Pillars section */
+
+  /* Footer section */
+  footer {
+    /* padding-top: 100px; */
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--iceColor);
+  }
+  /* Footer section */
+}
+
+@media (max-width: 576px) {
+  /* Our Values section */
+  .ourValuesIconsBox {
+    max-width: 460px;
+    width: 420px;
+    justify-content: center;
+  }
+
+  /* End of Our Values section */
+
+  /* Testimonials section  */
+  /* .testimonialsTitle {
+      font-size: 30px;
+    }
+    .teachingContainer .blueClassicBtn {
+      font-size: 13px;
+    }
+    .depoimentosSlide-wrapper {
+      padding-bottom: 0px;
+    }
+    .testimonialChangeBtnBox {
+      justify-content: center;
+    } */
+
+  /* End Testimonials section  */
+
+  /* Footer Section */
+  .footerTextBox {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .OurCoursesFooterBox,
+  .footerInfoBox,
+  .footerRegristrationBox {
+    width: 100%;
+    align-items: center;
+  }
+  .footerInfoBox .linksCreatedJs {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footerInfoBox .infoBoxLeftFooter,
+  .footerInfoBox .serviceBox {
+    align-items: center;
+  }
+  .footerSocialMediaIconBox i {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+  .FooterEndUniMais {
+    width: 170px;
+  }
+  /* End Footer Section */
+}
+
+@media (max-width: 440px) {
+  /* Navbar section  */
+  .subNavBarLinks {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbarMenu {
+    position: fixed;
+    top: 115px;
+  }
+  /* End of Navbar section  */
+
+  /* Header section */
+  header {
+    margin-top: 120px;
+  }
+  /* End of Header section */
+
+  /* Our Story section */
+  .ourStoryFooterVideo {
+    height: 200px;
+  }
+  /* End of Our Story section */
+
+  /* Our Values section */
+  .ourValuesIconsBox {
+    max-width: 460px;
+    width: 100%;
+    justify-content: center;
+  }
+  .ourValuesTitle {
+    font-size: 28px;
+  }
+  /* End of Our Values section */
+
+  /* Testimonial section */
+  /* .depoimentosSlide-list {
+      column-gap: 0px;
+    }
+    .depoimentosSlide-list .depoimentosSlide-item {
+      width: 280px;
+    } */
+  /* End of Testimonial section */
+}
