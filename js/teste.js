@@ -5,7 +5,7 @@ const frontUrl = siteProt + siteHost;
 let jsonFile = "/api/getJson.aspx?type=home";
 let menuInfo = "/api/getJson.aspx?type=menu";
 
-// let initUrl = frontUrl;  //No Grape devo descomentar essa variável footerInfoBox
+let initUrl = frontUrl;
 
 let seachInput = document.getElementById("courseName");
 let seachInputIcon = document.querySelector(".seachInputIcon");
@@ -23,16 +23,6 @@ const coursesList = [];
 const allCategoriesSearchBtn = document.querySelector(
   "#allCategoriesSearchBtn"
 );
-
-// let initUrl = 'https://euestudo.com.vc'; //No Grape devo Comentar essa variável //https://espg.com.br/
-// let initUrl = 'https://catalogo.drmeducacao.com.br'; //No Grape devo Comentar essa variável //
-// let initUrl = 'https://espg.com.br'; //No Grape devo Comentar essa variável //
-// let initUrl = 'https://faculdadesucesso.edu.br'; //Tem 3 emphasis
-let initUrl = "https://uniflor.edu.br"; //Tem 9 emphasis
-// let initUrl = 'http://facigma.edu.br'; // SÓ ESSE ESTÁ DANDO ERRO! //
-// let initUrl = "https://reboucasdigital.com.br"; // SÓ ESSE ESTÁ DANDO ERRO! ///
-// let initUrl = 'https://eja.aprendiz.edu.br'; //
-// let initUrl = "https://minhaies.drmeducacao.com.br"; //
 
 const pageLinksList = [
   { page: "Home", id: "408098" },
@@ -67,130 +57,6 @@ function scrollAndCenterElement(elementId) {
     });
   }
 }
-
-// // Navbar
-// //Create all menu informations
-// function fetchJsonNavbarLinks() {
-//   try {
-//     fetch(`${initUrl}${menuInfo}`)
-//       .then((resposta) => resposta.json())
-//       .then((json) => {
-//         createNavBarInfo(json);
-//         getFooterInfo(json);
-//       });
-//   } catch (e) {
-//     console.warn(e);
-//   }
-// }
-// function createNavBarInfo(json) {
-//   try {
-//     let navbarImgBox = document.querySelector(".navbarImg");
-//     //Logo image
-//     let logoSite = json.logo;
-//     let linkToLogo = document.createElement("a");
-//     for (let i = 0; i < pageLinksList.length; i++) {
-//       if (pageLinksList[i].page === "Home") {
-//         linkToLogo.setAttribute("aria-label", `Acesse Home`);
-//         linkToLogo.setAttribute("href", `/page/${pageLinksList[i].id}/Home`);
-//       }
-//     }
-//     navbarImgBox.appendChild(linkToLogo);
-//     let logoImg = document.createElement("img");
-//     logoImg.setAttribute("src", `${initUrl + logoSite}`);
-//     logoImg.setAttribute("width", `160px`);
-//     logoImg.setAttribute("height", `59px`);
-//     logoImg.setAttribute("alt", "Logo image");
-//     linkToLogo.appendChild(logoImg);
-//     let hiddenLabel = document.createElement("span");
-//     hiddenLabel.style.cssText =
-//       "display: flex; overflow: hidden; width:0; height:0;";
-//     hiddenLabel.innerText = "Acessar Home";
-//     linkToLogo.appendChild(hiddenLabel);
-//   } catch (e) {
-//     console.warn(e);
-//   }
-// }
-// //End create all menu informations
-
-// // Mobile menu
-// try {
-//   const mobileMenu = document.querySelector(".menuMobileBtn");
-//   const barsMenuList = Array.prototype.slice.call(
-//     document.querySelectorAll(".menuMobileBars")
-//   );
-//   const navbarMenuMobile = document.querySelector(".navbarMenu");
-//   let clickOnMenu = true;
-
-//   mobileMenu.addEventListener("click", () => {
-//     if (clickOnMenu) {
-//       navbarMenuMobile.style.display = "flex";
-//       barsMenuList.forEach((bar, idx) => {
-//         if (idx === 0) {
-//           bar.style.cssText =
-//             "transform: rotate(-50deg); margin-top: 0px;transition: 0.6s;width: 130%;";
-//         } else if (idx === 1) {
-//           bar.style.display = "none";
-//         } else if (idx === 2) {
-//           bar.style.cssText =
-//             "transform: rotate(50deg); margin-top: -10px;transition: 0.6s;width: 130%;";
-//         }
-//       });
-//       setTimeout(() => (clickOnMenu = false), 600);
-//     } else {
-//       navbarMenuMobile.style.display = "none";
-//       barsMenuList.forEach((bar, idx) => {
-//         if (idx === 0) {
-//           bar.style.cssText =
-//             "transform: rotate(0deg); transition: 0.6s; width: 100%;";
-//         } else if (idx === 1) {
-//           setTimeout(() => (bar.style.display = "block"), 350);
-//         } else if (idx === 2) {
-//           bar.style.cssText =
-//             "transform: rotate(0deg); transition: 0.6s;width: 100%;";
-//         }
-//       });
-//       setTimeout(() => (clickOnMenu = true), 600);
-//     }
-//   });
-// } catch (er) {
-//   console.warn(er);
-// }
-// //Create navbar link
-// const navbarLinks = Array.prototype.slice.call(
-//   document.querySelectorAll(".itemsMenuNavbar a")
-// );
-// try {
-//   for (let i = 0; i < pageLinksList.length; i++) {
-//     for (let e = 0; e < navbarLinks.length; e++) {
-//       if (pageLinksList[i].page === navbarLinks[e].textContent) {
-//         navbarLinks[e].setAttribute(
-//           "href",
-//           `/page/${pageLinksList[i].id}/${pageLinksList[i].page}`
-//         );
-//       }
-//     }
-//   }
-// } catch (e) {
-//   console.warn(e);
-// }
-// //Login button
-// let coletaLeadLogin = document.querySelector(".coletaLeadLogin");
-// for (let i = 0; i < pageLinksList.length; i++) {
-//   if (pageLinksList[i].page === "Login") {
-//     coletaLeadLogin.setAttribute("href", `/page/${pageLinksList[i].id}/Login`);
-//   }
-// }
-// //Register button
-// let registerNavbarBtn = document.querySelector(".registerNavbarBtn");
-// for (let i = 0; i < pageLinksList.length; i++) {
-//   if (pageLinksList[i].page === "Registre-se") {
-//     registerNavbarBtn.setAttribute(
-//       "href",
-//       `/page/${pageLinksList[i].id}/Registre-se`
-//     ); //
-//   }
-// }
-// // End of Navbar
 
 //Header section
 function fetchMenuInfo() {
@@ -1368,38 +1234,6 @@ function fecthSeachCourse(seachName) {
         }
         categoryTitle.classList.add("categoryTitle");
         textsBox.appendChild(categoryTitle);
-        // //Number of courses
-        // let NumberOfCourses = document.createElement('p');
-        // NumberOfCourses.classList.add('NumberOfCourses');
-        // NumberOfCourses.innerHTML = courseCategoryName;
-        // textsBox.appendChild(NumberOfCourses);
-        // //Category information
-        // let categoryInfo = document.createElement('p');
-        // categoryInfo.innerHTML = `${courseThemeName}`;
-        // categoryInfo.classList.add('categoryInfo');
-        // textsBox.appendChild(categoryInfo);
-        // //Last box Category
-        // let lastBoxCategory = document.createElement('div');
-        // lastBoxCategory.classList.add('lastBoxCategory');
-        // boxOfEachCategory.appendChild(lastBoxCategory);
-        // //Bar
-        // let categoryBar = document.createElement('hr');
-        // categoryBar.classList.add('categoryBar');
-        // lastBoxCategory.appendChild(categoryBar);
-        // //Category button
-        // let categoryLink = document.createElement('a');
-        // categoryLink.innerHTML = 'Saiba mais...';
-        // categoryLink.classList.add('categoryLink');
-        // for (let y = 0; y < pageLinksList.length; y++) {
-        //   if (pageLinksList[y].page === 'Curso') {
-        //     categoryLink.setAttribute(
-        //       'href',
-        //       `${initUrl}/pages/${pageLinksList[y].id}/Detalhe Curso?courseId=${courseId}&ysnPacote=${ysnPacote}`
-        //     );
-        //   }
-        // }
-        // console.log(coursesList.length);
-        // lastBoxCategory.appendChild(categoryLink);
       } else {
         for (let i = 0; i < json.coursesList.course.length; i++) {
           let categoryName = json.coursesList.course[i].title;
@@ -1444,38 +1278,6 @@ function fecthSeachCourse(seachName) {
           }
           categoryTitle.classList.add("categoryTitle");
           textsBox.appendChild(categoryTitle);
-          // //Number of courses
-          // let NumberOfCourses = document.createElement('p');
-          // NumberOfCourses.classList.add('NumberOfCourses');
-          // NumberOfCourses.innerHTML = courseCategoryName;
-          // textsBox.appendChild(NumberOfCourses);
-          // //Category information
-          // let categoryInfo = document.createElement('p');
-          // categoryInfo.innerHTML = `${courseThemeName}`;
-          // categoryInfo.classList.add('categoryInfo');
-          // textsBox.appendChild(categoryInfo);
-          // //Last box Category
-          // let lastBoxCategory = document.createElement('div');
-          // lastBoxCategory.classList.add('lastBoxCategory');
-          // boxOfEachCategory.appendChild(lastBoxCategory);
-          // //Bar
-          // let categoryBar = document.createElement('hr');
-          // categoryBar.classList.add('categoryBar');
-          // lastBoxCategory.appendChild(categoryBar);
-          // //Category button
-          // let categoryLink = document.createElement('a');
-          // categoryLink.innerHTML = 'Saiba mais...';
-          // categoryLink.classList.add('categoryLink');
-          // for (let y = 0; y < pageLinksList.length; y++) {
-          //   if (pageLinksList[y].page === 'Curso') {
-          //     categoryLink.setAttribute(
-          //       'href',
-          //       `${pageLinksList[y].id}?courseId=${courseId}&ysnPacote=${ysnPacote}`
-          //     );
-          //   }
-          // }
-          // console.log(coursesList.length);
-          // lastBoxCategory.appendChild(categoryLink);
         }
       }
 
@@ -3020,145 +2822,6 @@ function checkIfFreeSlideExist() {
 }
 // End of Free Slide code
 
-// // Footer Section
-// const logoFooterBox = document.querySelector(".footerEnd");
-// const socialMediaBox = document.querySelector(".footerSocialMediaIconBox");
-// const footerInfoBox = document.querySelector(".footerInfoBox");
-
-// // $('.linksCreatedJs').remove();
-// let footerLinkBox = document.createElement("div");
-// footerLinkBox.classList.add("linksCreatedJs");
-// footerInfoBox.appendChild(footerLinkBox);
-// let infoBoxLeftFooter = document.createElement("div");
-// infoBoxLeftFooter.classList.add("infoBoxLeftFooter");
-// footerLinkBox.appendChild(infoBoxLeftFooter);
-
-// serviceBox = document.createElement("div");
-// serviceBox.classList.add("serviceBox");
-// footerLinkBox.appendChild(serviceBox);
-// //Politic link
-// let footerPolicyLinks = document.createElement("a");
-// footerPolicyLinks.innerText = "Política e Privacidade";
-// for (let i = 0; i < pageLinksList.length; i++) {
-//   if (pageLinksList[i].page === "Política de Privacidade") {
-//     footerPolicyLinks.setAttribute(
-//       "href",
-//       `/page/${pageLinksList[i].id}/Política-Privacidade`
-//     );
-//     footerPolicyLinks.setAttribute("aria-label", footerPolicyLinks.textContent);
-//   }
-// }
-// footerPolicyLinks.classList.add("OurCoursesLinks");
-// serviceBox.appendChild(footerPolicyLinks);
-// //Use terms link
-// let footerUseTermsLink = document.createElement("a");
-// footerUseTermsLink.innerText = "Termos de Uso";
-// for (let i = 0; i < pageLinksList.length; i++) {
-//   if (pageLinksList[i].page === "Termos de Uso") {
-//     footerUseTermsLink.setAttribute(
-//       "href",
-//       `/page/${pageLinksList[i].id}/Termos-Uso`
-//     );
-//     footerUseTermsLink.setAttribute(
-//       "aria-label",
-//       footerUseTermsLink.textContent
-//     );
-//   }
-// }
-// footerUseTermsLink.classList.add("OurCoursesLinks");
-// serviceBox.appendChild(footerUseTermsLink);
-// //navbarLinks
-// try {
-//   for (let i = 0; i < pageLinksList.length; i++) {
-//     for (let e = 0; e < navbarLinks.length; e++) {
-//       if (pageLinksList[i].page === navbarLinks[e].textContent) {
-//         let links = navbarLinks[e].textContent;
-//         let navBarCopy = document.createElement("a");
-//         navBarCopy.innerHTML = links;
-//         navBarCopy.setAttribute("href", `/page/${pageLinksList[i].id}`);
-//         navBarCopy.setAttribute("aria-label", links);
-//         infoBoxLeftFooter.appendChild(navBarCopy);
-//       }
-//     }
-//   }
-// } catch (e) {
-//   console.warn(e);
-// }
-
-// //Footer logo
-// function getFooterInfo(json) {
-//   try {
-//     let logoSite = json.logo;
-//     let linkToLogo = document.createElement("a");
-//     for (let i = 0; i < pageLinksList.length; i++) {
-//       if (pageLinksList[i].page === "Home") {
-//         linkToLogo.setAttribute("aria-label", "Acessar Home");
-//         linkToLogo.setAttribute("href", `/page/${pageLinksList[i].id}/Home`);
-//       }
-//     }
-//     logoFooterBox.prepend(linkToLogo);
-//     let logoImg = document.createElement("img");
-//     logoImg.setAttribute("src", `${initUrl + logoSite}`);
-//     logoImg.setAttribute("data-src", `${initUrl + logoSite}`);
-//     logoImg.setAttribute("loading", `lazy`);
-//     logoImg.setAttribute("width", `162px`);
-//     logoImg.setAttribute("height", `60px`);
-//     logoImg.setAttribute("alt", "Logo image");
-//     linkToLogo.appendChild(logoImg);
-//     let hiddenText = document.createElement("span");
-//     hiddenText.innerText = "Acessar Home";
-//     hiddenText.style.cssText =
-//       "display:flex; overflow:hidden; width:0; height:0;";
-//     linkToLogo.appendChild(hiddenText);
-//   } catch (e) {
-//     console.warn(e);
-//   }
-// }
-
-// function getSocialMediaFooter(json) {
-//   try {
-//     if (
-//       json.socialMedias &&
-//       json.socialMedias.links &&
-//       json.socialMedias.links.length !== undefined &&
-//       json.socialMedias.links.length !== null
-//     ) {
-//       let howManySocialMedia = json.socialMedias.links.length;
-//       for (let i = 0; i < howManySocialMedia; i++) {
-//         let socialMediaName = json.socialMedias.links[i].icon;
-//         let socialMediaLink = document.createElement("a");
-//         socialMediaLink.setAttribute("href", json.socialMedias.links[i].href);
-//         socialMediaLink.setAttribute(
-//           "aria-label",
-//           `Acessar ${socialMediaName}`
-//         );
-//         socialMediaLink.setAttribute("target", "_blank");
-//         let socialMediaIcon = document.createElement("i");
-//         socialMediaIcon.classList.add("fa-brands");
-//         socialMediaIcon.classList.add(
-//           socialMediaIcon.classList.add(
-//             `fa-${
-//               socialMediaName === "twitter"
-//                 ? "x-" + socialMediaName
-//                 : socialMediaName
-//             }`
-//           )
-//         );
-//         socialMediaLink.appendChild(socialMediaIcon);
-//         const iconHiddenText = document.createElement("span");
-//         iconHiddenText.style.cssText = `display: flex; overflow: hidden; width: 0; height: 0;`;
-//         iconHiddenText.textContent = `Acessar ${socialMediaName}`;
-//         socialMediaLink.appendChild(iconHiddenText);
-
-//         socialMediaBox.appendChild(socialMediaLink);
-//       }
-//     }
-//   } catch (e) {
-//     console.warn(e);
-//   }
-// }
-// // End Footer Section
-
 // SEO and PWA adjustiments
 function seoAdjustment() {
   const head = document.head || document.getElementsByTagName("head")[0];
@@ -3254,108 +2917,43 @@ function createServiceWorker() {
   document.body.appendChild(script);
 }
 window.onload = createServiceWorker();
-// The end SEO and PWA adjustiments null;
 
 seoAdjustment();
 
 //Call functions
-// fetchJsonNavbarLinks();
 fetchMenuInfo();
 fetchallJsonCourseCategories();
 findElementsAndAddSeoAttributes();
 checkIfFreeSlideExist();
-// getScreemSize();
 
 function renderNavbarSection() {
-  // var navBarIframe = document.createElement("iframe");
-  // navBarIframe.src = "/navbar.html"; // Substitua 'outra_pagina.html' pelo URL da página que você quer renderizar
-  // navBarIframe.style.width = "100%";
-  // navBarIframe.style.height = "auto";
-  // navBarIframe.style.border = "none";
-  // //   navBarIframe.style.title = "Navbar";
-  // document.getElementById("navbarIframe").appendChild(navBarIframe);
-
-  // //   var intervalID = setInterval(function () {
-  // //     const navbar = iframe.contentDocument.querySelector(".navbarMenu");
-
-  // //     if (navbar) {
-  // //       if (getComputedStyle(navbar).display === "none") {
-  // //         iframe.style.height = "100px";
-  // //         console.log("O Iframe é nome");
-  // //       } else {
-  // //         iframe.style.height = "100vh";
-  // //         console.log("O Iframe é flex");
-  // //       }
-  // //     }
-  // //   }, 1000);
-  // //   // Criando um MutationObserver para observar mudanças no estilo display do .navbarMenu
-  // //   var observer = new MutationObserver(function (mutationsList) {
-  // //     console.log("Localizou!");
-  // //     for (var mutation of mutationsList) {
-  // //       if (
-  // //         mutation.attributeName === "style" &&
-  // //         mutation.target.classList.contains("navbarMenu")
-  // //       ) {
-  // //         adjustIframeHeight();
-  // //       }
-  // //     }
-  // //   });
-
-  // navBarIframe.onload = function () {
-  //   const navbar = navBarIframe.contentDocument.querySelector(".navbarMenu");
-
-  //   // Criando um MutationObserver para observar mudanças no estilo display do .navbarMenu
-  //   var observer = new MutationObserver(function (mutationsList) {
-  //     for (var mutation of mutationsList) {
-  //       if (mutation.attributeName === "style") {
-  //         adjustIframeHeight();
-  //       }
-  //     }
-  //   });
-
-  //   // Configurando MutationObserver para observar mudanças no estilo de display do .navbarMenu
-  //   observer.observe(navbar, { attributes: true });
-
-  //   // Função para ajustar a altura do iframe com base no estilo display do .navbarMenu
-  //   function adjustIframeHeight() {
-  //     if (navbar) {
-  //       if (getComputedStyle(navbar).display === "none") {
-  //         navBarIframe.style.height = "100px";
-  //         console.log("O Iframe é none");
-  //       } else {
-  //         console.log("O Iframe é flex");
-  //         navBarIframe.style.height = "100vh";
-  //       }
-  //     }
-  //   }
-  // };
   const container = document.getElementById("navbarIframe");
-  fetch("navbar.html")
+  fetch("/pages/513947/navbar-teste")
     .then((response) => response.text())
     .then((html) => (container.innerHTML = html));
   const navbarJs = document.createElement("script");
-  navbarJs.src = "/js/navBar.js";
+  navbarJs.type = "text/javascript";
+  navbarJs.src = "/assets/js/templates/teste/navBar.js";
   document.getElementsByTagName("body")[0].appendChild(navbarJs);
 }
 
 function renderFooterSection() {
-  // var footerIframe = document.createElement("iframe");
-  // footerIframe.src = "/footer.html"; // Substitua 'outra_pagina.html' pelo URL da página que você quer renderizar
-  // footerIframe.style.width = "100%";
-  // footerIframe.style.height = "100%";
-  // footerIframe.style.border = "none";
-  // footerIframe.style.title = "Navbar";
-  // document.getElementById("footerPage").appendChild(footerIframe);
   const container = document.getElementById("footerPage");
-  fetch("footer.html")
+  fetch("/pages/513948/footer-teste")
     .then((response) => response.text())
     .then((html) => (container.innerHTML = html));
-  const navbarJs = document.createElement("script");
-  navbarJs.src = "/js/footer.js";
-  document.getElementsByTagName("body")[0].appendChild(navbarJs);
+  const footerJs = document.createElement("script");
+  footerJs.type = "text/javascript";
+  footerJs.src = "/assets/js/templates/teste/footer.js";
+  document.getElementsByTagName("body")[0].appendChild(footerJs);
 }
 
-window.onload = function () {
+// window.onload = function () {
+//   renderFooterSection();
+//   renderNavbarSection();
+// };
+
+window.addEventListener("DOMContentLoaded", function () {
   renderFooterSection();
   renderNavbarSection();
-};
+});
